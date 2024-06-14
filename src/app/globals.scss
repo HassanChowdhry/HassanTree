@@ -1,0 +1,88 @@
+@import 'animate.css';
+@import '~loaders.css/src/animations/pacman.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  min-height: 100vh;
+  height: 100%;
+  background-image: linear-gradient(
+    40deg,
+    hsl(229deg 72% 23%) 0%,
+    hsl(233deg 67% 21%) 6%,
+    hsl(237deg 62% 20%) 15%,
+    hsl(241deg 55% 19%) 25%,
+    hsl(245deg 51% 18%) 37%,
+    hsl(249deg 45% 17%) 50%,
+    hsl(249deg 45% 26%) 63%,
+    hsl(249deg 47% 35%) 75%,
+    hsl(249deg 47% 43%) 86%,
+    hsl(248deg 48% 52%) 94%,
+    hsl(248deg 48% 61%) 100%
+  );
+}
+
+.text-animate {
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  min-width: 10px;
+}
+
+.text-animate-hover {
+  min-width: 10px;
+  display: inline-block;
+  animation-fill-mode: both;
+
+  &:hover {
+    animation: rubberBand 1s;
+    color: #a287d4;
+  }
+}
+
+@for $i from 1 through 40 {
+  .text-animate._#{$i} {
+    animation-delay: #{calc($i / 12)}s;
+  }
+} 
+
+.home {
+  .pfp {
+    animation: rotateIn 1s linear both;
+    animation-delay: 0.1s;
+  }
+  
+  .box {
+    transition: .5s;
+    animation: fadeInUp 1s 1.8s backwards;
+  }
+}
+
+@for $i from 1 through 8 {
+  .box._#{$i} {
+    animation-delay: #{calc($i / 12)}s;
+  }
+} 
+
+.loader-hidden {
+  display: none;
+}
+
+.loader-active {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  animation: fadeOut 1s 1s;
+  animation-fill-mode: forwards;
+}

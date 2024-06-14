@@ -1,0 +1,36 @@
+{
+  "name": "@HassanChowdhry",
+  "avatar": "/pfp.png",
+  "links": [
+    {
+      "title": "My Website",
+      "href": "https://hassanchowdhryportfolio.web.app/",
+      "image": "/portfolio.png"
+    },
+    {
+      "title": "GitHub",
+      "href": "https://github.com/HassanChowdhry",
+      "image": "/github.png"
+    },
+    {
+      "title": "LinkedIn",
+      "href": "https://linkedin.com/in/HassanChowdhry",
+      "image": "/linkedin.png"
+    },
+    {
+      "title": "Leetcode",
+      "href": "https://leetcode.com/u/HassanChowdhry/",
+      "image": "/leetcode.webp"
+    },
+    {
+      "title": "Upwork",
+      "href": "https://www.upwork.com/freelancers/~013df04d0a3432d810",
+      "image": "/upwork.png"
+    },
+    {
+      "title": "Resume",
+      "href": "/HassanChowdhry_Resume.pdf",
+      "image": "/Resume.png"
+    }
+  ]
+}
