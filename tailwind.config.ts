@@ -9,10 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "primary": "#a287d4",
+        "primary": "#915eff",
       },
       boxShadow: {
         "card": "0 0 15px",
+      },
+      backgroundImage: {
+        "hero-pattern": "url('/herobg.png')",
       },
     },
   },

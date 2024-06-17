@@ -24,9 +24,10 @@ function LinkCard({ i, title, href, image }: { i:number, title: string, href: st
   };
   
   return (
+    // #DADADB
     <div 
       className={`box _${i} flex items-center max-w-xl w-full rounded-md border-2
-        transition-all border-gray-300 mb-6 bg-gray-200 p-2 hover:scale-105
+        transition-all border-gray-300 mb-6 bg-[#DADADB] p-2 hover:scale-105
         hover:border-2 text-gray-700 hover:text-primary  hover:border-primary hover:shadow-primary hover:shadow-card
         `}
         >
@@ -71,9 +72,9 @@ export default function Home() {
   }, []);
   
   return (
-    <>
+    <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center md:py-12 h-screen ">
       {!isLoading && (
-        <main className="home flex items-center flex-col justify-center mx-auto w-full py-8 md:mt-10 px-10">
+        <main className="home flex items-center flex-col justify-center mx-auto w-full py-8 px-10">
           <Image
             src={data.avatar}
             alt={data.name}
@@ -92,6 +93,6 @@ export default function Home() {
         </main>
       )}
       {isLoading && <Loader active type="pacman" />}
-    </>
+    </div>
   );
 }
